@@ -22,11 +22,11 @@ namespace Generics_Collection_Lab8
             {
                 //using a simple get property value from "this property" in a WriteLine statement.
                 GetPropertyValues(obj);
-
+                //all the loops contained what's inside GetPropertyValues() before i segmented it to it's own function
             }
             Console.WriteLine("-------------------------------------------");
             Console.WriteLine("Retriving Via Pop method\n");
-            int stackLength = employees.Count;
+            int stackLength = employees.Count; // gets the length of the stack Before it's manipulated to use in the for loop
             for (int i = 0; i < stackLength; i++)
             {
                 var temp = employees.Pop();//removeing the object from the stack and and passing it to GetPropertValues method
@@ -68,7 +68,7 @@ namespace Generics_Collection_Lab8
             employees.Add(emp3);
             employees.Add(emp4);
             employees.Add(emp5);
-            if (employees.Contains(emp2))
+            if (employees.Contains(emp2)) // simply checking that emp2 is in the list
             {
                 Console.WriteLine("Employee2 object exists in the list");
             }
@@ -79,14 +79,15 @@ namespace Generics_Collection_Lab8
             Console.WriteLine();
             Console.WriteLine("Finding the first object with gender 'Male' in the list");
             // get's the first index of Gender = Male, then passes that into GetPropertyValues method
-            // using p for parameter in the list, with some quick LINQ to query for the right value
+            // using p for parameter in the list, with some quick LINQ to query for the first "correct" object
             int index = employees.FindIndex(p => p.Gender == "Male"); 
             GetPropertyValues(employees[index]);
 
             Console.WriteLine();
             Console.WriteLine("Finding all objects with the gender 'Male'");
             // checking for Gender = Male in all the objects and if it is then passes it to the GetPropertyValues method
-            foreach (object obj in employees.FindAll(p => p.Gender == "Male")) 
+            //doing same as above but for all "Correct" objects
+            foreach (object obj in employees.FindAll(p => p.Gender == "Male"))
             {
                 GetPropertyValues(obj);
             }

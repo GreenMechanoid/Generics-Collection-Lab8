@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Generics_Collection_Lab8
 {
+    //class made after requirments in the lab, could've added more but this is a first draft
     internal class Employee
     {
         public int Id { get; set; }

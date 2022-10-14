@@ -32,7 +32,7 @@ namespace Collection_Generics_Lab8
 
                 do
                 {
-                    string input = Console.ReadLine();
+                    string input = Console.ReadLine(); // userinput for selecting "Part 1 or Part 2" of the lab
                     if (int.TryParse(input, out int result))
                     {
                         selector = result;
