@@ -50,7 +50,9 @@ namespace Generics_Collection_Lab8
 
             }
             Console.WriteLine(); // formatting the printout a lil bit for convinience
-            if (employees.Contains(emp3)) // simple check if stack contains emp3
+            // simple check if stack contains emp3
+            // and considering the assignment is unclear on how this should be done i've gone with the exampel's way of showing - after correspondence this was told it was the correct solution to implement
+            if (employees.Contains(emp3)) 
             {
                 Console.WriteLine("Stack contains Employee 3");
             }
@@ -68,7 +70,9 @@ namespace Generics_Collection_Lab8
             employees.Add(emp3);
             employees.Add(emp4);
             employees.Add(emp5);
-            if (employees.Contains(emp2)) // simply checking that emp2 is in the list
+            // simply checking that emp2 is in the list
+            // and considering the assignment is unclear on how this should be done i've gone with the exampel's way of showing - after correspondence this was told it was the correct solution to implement 
+            if (employees.Contains(emp2)) 
             {
                 Console.WriteLine("Employee2 object exists in the list");
             }
